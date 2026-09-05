@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEOWUN // MAGY</title>
+    <meta name="description" content="Magy is a local AI software engineering system where models propose and the runtime verifies.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="aeowun-environment">
+    <div id="void-bg"></div>
+    <div id="technical-grid"></div>
+    <div id="wave-field">
+        <svg id="wave-field-svg" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+            <defs>
+                <filter id="ribbon-glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="15" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                </filter>
+                <linearGradient id="grad-v" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(124, 34, 228, 0)" />
+                    <stop offset="50%" stop-color="rgba(124, 34, 228, 0.7)" />
+                    <stop offset="100%" stop-color="rgba(124, 34, 228, 0)" />
+                </linearGradient>
+                <linearGradient id="grad-b" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="rgba(0, 210, 241, 0)" />
+                    <stop offset="50%" stop-color="rgba(0, 210, 241, 0.5)" />
+                    <stop offset="100%" stop-color="rgba(0, 210, 241, 0)" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+    <canvas id="ambient-canvas"></canvas>
+
+    <header class="aeowun-header">
+        <div class="header-inner container">
+            <a href="/" class="brand"><span class="brand-name mono">AEOWUN</span></a>
+            <nav class="product-nav">
+                <a href="/" class="nav-item mono">STUDIO</a>
+                <a href="/magy/" class="nav-item mono active">MAGY</a>
+                <a href="/ide/" class="nav-item mono">IDE</a>
+                <a href="/support/" class="nav-item mono">SUPPORT</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="product-page container">
+        <section class="product-hero">
+            <div class="brand-label mono">AEOWUN // ACTIVE DEVELOPMENT</div>
+            <h1 class="product-title mono">MAGY</h1>
+            <p class="hero-lead">A local AI software engineering system where the model proposes and the runtime verifies.</p>
+            <div class="hero-actions">
+                <a class="primary-button mono" href="#how-it-works">READ THE ARCHITECTURE</a>
+                <a class="secondary-button mono" href="#how-it-works">HOW IT WORKS</a>
+            </div>
+        </section>
+
+        <section class="trust-panel" id="how-it-works">
+            <div>
+                <div class="brand-label mono">THE SAFETY BOUNDARY</div>
+                <h2 class="section-heading mono">REASONING IS NOT AUTHORITY.</h2>
+            </div>
+            <p>Magy separates model reasoning from action execution. The model can suggest a plan, but the runtime controls what is read, changed, and executed inside the selected project.</p>
+        </section>
+
+        <section class="feature-grid">
+            <article class="feature-card">
+                <span class="mono ecosystem-status available">01 // PROPOSE</span>
+                <h2 class="mono">THE MODEL REASONS</h2>
+                <p>Magy uses a provider interface so local model backends can interpret the task without owning the project directly.</p>
+            </article>
+            <article class="feature-card">
+                <span class="mono ecosystem-status available">02 // CONTROL</span>
+                <h2 class="mono">THE RUNTIME DECIDES</h2>
+                <p>Tool calls are interpreted by the runtime. Read-only work can run automatically; restricted writes and commands require operator approval.</p>
+            </article>
+            <article class="feature-card">
+                <span class="mono ecosystem-status available">03 // VERIFY</span>
+                <h2 class="mono">THE PROJECT RESPONDS</h2>
+                <p>After changes, Magy runs a verification command and feeds objective failure output back into the loop instead of declaring success early.</p>
+            </article>
+        </section>
+
+        <section class="architecture-panel">
+            <div class="brand-label mono">SYSTEM MODEL</div>
+            <pre class="architecture-diagram mono">USER
+  ↓
+MAGY APP
+  ↓
+COORDINATOR ─── PROJECT STATE
+  ↓
+AGENT ─── MODEL
+  ↓
+CONTROLLED TOOLS
+  ↓
+RUNTIME
+  ↓
+PROJECT</pre>
+            <p>Magy is built around a simple promise: intelligence may propose, but evidence decides whether the work is complete.</p>
+        </section>
+
+        <section class="limitations-panel">
+            <div class="brand-label mono">HONEST STATUS</div>
+            <h2 class="section-heading mono">ALPHA // LOCAL-FIRST // IN PROGRESS</h2>
+            <p>Magy is an active engineering project. It currently expects a local OpenAI-compatible model server, such as LM Studio, and is not presented as a finished hosted service. The goal is dependable local development assistance with explicit boundaries—not an autonomous replacement for an engineer.</p>
+        </section>
+    </main>
+
+    <footer class="aeowun-footer">
+        <div class="container footer-inner">
+            <div class="mono footer-copy">© 2026 AEOWUN.</div>
+            <div class="footer-links">
+                <a href="/support/" class="mono">SUPPORT</a>
+                <a href="/privacy/" class="mono">PRIVACY</a>
+            </div>
+        </div>
+    </footer>
+    <script src="../app.js"></script>
+</body>
+</html>
