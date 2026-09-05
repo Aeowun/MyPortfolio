@@ -346,6 +346,17 @@ body:not(.home-page) {
     transform: translateY(-5px);
 }
 
+.ecosystem-card:not(a) {
+    cursor: default;
+}
+
+.ecosystem-card:not(a):hover {
+    color: var(--text);
+    border-color: var(--border);
+    background: rgba(255,255,255,0.025);
+    transform: none;
+}
+
 .ecosystem-card strong {
     color: var(--text-bright);
     font-size: 1rem;
@@ -365,6 +376,14 @@ body:not(.home-page) {
 
 .ecosystem-status.available {
     color: var(--accent-cyan);
+}
+
+.final-note {
+    max-width: 560px;
+    margin: 36px auto 0;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.7;
 }
 
 /* SCENE 03: CAPTURE */
